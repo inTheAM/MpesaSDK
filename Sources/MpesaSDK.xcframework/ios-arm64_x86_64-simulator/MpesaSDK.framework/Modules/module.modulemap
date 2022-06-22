@@ -1,0 +1,11 @@
+framework module MpesaSDK {
+  umbrella header "MpesaSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module MpesaSDK.Swift {
+    header "MpesaSDK-Swift.h"
+    requires objc
+}

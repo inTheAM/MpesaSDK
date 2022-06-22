@@ -1,0 +1,174 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target arm64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MpesaSDK
+import Combine
+import Foundation
+@_exported import MpesaSDK
+import Swift
+import _Concurrency
+extension MpesaSDK.Mpesa {
+  @_hasMissingDesignatedInitializers final public class Express {
+    public typealias BuyGoodsRequest = MpesaSDK.PayBillRequest
+    public typealias BuyGoodsResponse = MpesaSDK.ExpressTransactionResponse
+    public typealias PayBillResponse = MpesaSDK.ExpressTransactionResponse
+    public typealias TransactionQueryResponse = MpesaSDK.ExpressQueryResponse
+    final public func buyGoods(_ request: MpesaSDK.Mpesa.Express.BuyGoodsRequest, _ completionHandler: @escaping (Swift.Result<MpesaSDK.Mpesa.Express.BuyGoodsResponse, MpesaSDK.RequestError>) -> Swift.Void)
+    final public func payBill(_ request: MpesaSDK.PayBillRequest, _ completionHandler: @escaping (Swift.Result<MpesaSDK.Mpesa.Express.PayBillResponse, MpesaSDK.RequestError>) -> Swift.Void)
+    final public func checkStatus(of transaction: MpesaSDK.TransactionQueryRequest, _ completionHandler: @escaping (Swift.Result<MpesaSDK.Mpesa.Express.TransactionQueryResponse, MpesaSDK.RequestError>) -> Swift.Void)
+    @objc deinit
+  }
+}
+public enum RequestError : Swift.Error {
+  case invalidToken, requestFailed(error: Swift.String)
+}
+public struct C2BTransactionConfirmationRequest {
+  public var businessCode: Swift.Int
+  public var transactionType: MpesaSDK.TransactionType
+  public var amount: Swift.Int
+  public var senderPhoneNumber: Swift.Int
+  public var account: Swift.String
+}
+extension MpesaSDK.C2BTransactionConfirmationRequest : Swift.Encodable {
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct TransactionQueryRequest {
+  public init(businessCode: Swift.String, requestTime: Foundation.Date, checkoutRequestID: Swift.String)
+}
+public struct ExpressTransactionResponse {
+  public let merchantRequestID: Swift.String
+  public let checkoutRequestID: Swift.String
+  public let responseCode: Swift.String
+  public let responseDescription: Swift.String
+  public let customerMessage: Swift.String
+}
+extension MpesaSDK.ExpressTransactionResponse : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct Mpesa {
+  public enum Environment {
+    case development, production
+    public static func == (a: MpesaSDK.Mpesa.Environment, b: MpesaSDK.Mpesa.Environment) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static func setEnvironment(to environment: MpesaSDK.Mpesa.Environment)
+}
+public enum GenericResult : Swift.String {
+  case success, failure
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct PayBillRequest {
+  public init(payBillNumber: Swift.String, accountName: Swift.String, senderPhoneNumber: Swift.String, amount: Swift.Int, callbackURL: Swift.String, description: Swift.String)
+  public init(tillNumber: Swift.String, accountName: Swift.String, senderPhoneNumber: Swift.String, amount: Swift.Int, callbackURL: Swift.String, description: Swift.String)
+}
+public struct BuyGoods {
+}
+public struct CallbackURLRegistrationRequest : Swift.Encodable {
+  public init(businessCode: Swift.Int, fallbackAction: MpesaSDK.FallbackAction, callbackURL: MpesaSDK.Mpesa.C2B.CallbackURL)
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public enum FallbackAction : Swift.String {
+  case cancel, complete
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum TransactionType : Swift.String {
+  case payBill, buyGoods
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension MpesaSDK.Mpesa {
+  @_hasMissingDesignatedInitializers final public class C2B {
+    public static let shared: MpesaSDK.Mpesa.C2B
+    final public func registerURLs(_ request: MpesaSDK.CallbackURLRegistrationRequest, _ completionHandler: @escaping (Swift.Result<MpesaSDK.GenericResult, MpesaSDK.RequestError>) -> Swift.Void)
+    final public func confirmTransaction(_ request: MpesaSDK.C2BTransactionConfirmationRequest, _ completionHandler: @escaping (Swift.Result<MpesaSDK.C2BTransactionConfirmationResponse?, MpesaSDK.RequestError>) -> Swift.Void)
+    @objc deinit
+  }
+}
+public struct MpesaConfiguration {
+  public init(consumerKey: Swift.String, consumerSecret: Swift.String, passKey: Swift.String)
+}
+extension MpesaSDK.Mpesa {
+  @_hasMissingDesignatedInitializers final public class Manager {
+    public static let shared: MpesaSDK.Mpesa.Manager
+    final public func setConfiguration(_ configuration: MpesaSDK.MpesaConfiguration, _ completionHandler: @escaping (MpesaSDK.GenericResult) -> Swift.Void)
+    @objc deinit
+  }
+}
+extension MpesaSDK.Mpesa.Express {
+  public struct CallbackURL {
+    public init(baseURL: Swift.String, path: Swift.String)
+  }
+}
+public struct C2BTransactionConfirmationResponse {
+  public init(responseCode: Swift.String, responseDescription: Swift.String, originatorConversationID: Swift.String)
+  public let responseCode: Swift.String
+  public let responseDescription: Swift.String
+  public let originatorConversationID: Swift.String
+}
+extension MpesaSDK.C2BTransactionConfirmationResponse : Swift.Decodable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case responseCode, responseDescription, originatorConversationID
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct CallbackURLRegistrationResponse {
+  public var responseCode: Swift.String
+  public var originatorConversationID: Swift.String
+  public var result: MpesaSDK.GenericResult
+}
+extension MpesaSDK.CallbackURLRegistrationResponse : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+extension MpesaSDK.Mpesa.C2B {
+  public struct CallbackURL {
+    public init(baseURL: Swift.String, validationPath: Swift.String, confirmationPath: Swift.String)
+  }
+}
+public struct ExpressQueryResponse {
+  public let result: MpesaSDK.GenericResult
+  public let merchantRequestID: Swift.String
+  public let checkoutRequestID: Swift.String
+}
+extension MpesaSDK.ExpressQueryResponse : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+extension MpesaSDK.Mpesa.Environment : Swift.Equatable {}
+extension MpesaSDK.Mpesa.Environment : Swift.Hashable {}
+extension MpesaSDK.GenericResult : Swift.Equatable {}
+extension MpesaSDK.GenericResult : Swift.Hashable {}
+extension MpesaSDK.GenericResult : Swift.RawRepresentable {}
+extension MpesaSDK.FallbackAction : Swift.Equatable {}
+extension MpesaSDK.FallbackAction : Swift.Hashable {}
+extension MpesaSDK.FallbackAction : Swift.RawRepresentable {}
+extension MpesaSDK.TransactionType : Swift.Equatable {}
+extension MpesaSDK.TransactionType : Swift.Hashable {}
+extension MpesaSDK.TransactionType : Swift.RawRepresentable {}
+extension MpesaSDK.C2BTransactionConfirmationResponse.CodingKeys : Swift.Equatable {}
+extension MpesaSDK.C2BTransactionConfirmationResponse.CodingKeys : Swift.Hashable {}
+extension MpesaSDK.C2BTransactionConfirmationResponse.CodingKeys : Swift.RawRepresentable {}
