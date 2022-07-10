@@ -1,6 +1,9 @@
 # MpesaSDK
 An unofficial Swift library for interacting with the Safaricom Mpesa API in iOS Apps.
 
+## Maintenance:
+I will continue to maintain this package indefinitely.
+If you are interested in becoming a contributor, feel free to contact me.
 <br>
 
 ## Contents:
@@ -126,28 +129,3 @@ Mpesa.C2B.shared.confirmTransaction(request) { result in
 ```
 
 A successful request will return an instance of `C2BTransactionConfirmationResponse` containing the response from Mpesa.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
