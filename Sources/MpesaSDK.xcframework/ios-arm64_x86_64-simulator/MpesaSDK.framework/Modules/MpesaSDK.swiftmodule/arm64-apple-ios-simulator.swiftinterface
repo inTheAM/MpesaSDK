@@ -9,11 +9,10 @@ import _Concurrency
 extension MpesaSDK.Mpesa {
   @_hasMissingDesignatedInitializers final public class Express {
     public typealias BuyGoodsRequest = MpesaSDK.PayBillRequest
-    public typealias BuyGoodsResponse = MpesaSDK.ExpressTransactionResponse
-    public typealias PayBillResponse = MpesaSDK.ExpressTransactionResponse
+    public typealias BuyGoodsResponse = MpesaSDK.PayBillResponse
     public typealias TransactionQueryResponse = MpesaSDK.ExpressQueryResponse
     final public func buyGoods(_ request: MpesaSDK.Mpesa.Express.BuyGoodsRequest, _ completionHandler: @escaping (Swift.Result<MpesaSDK.Mpesa.Express.BuyGoodsResponse, MpesaSDK.RequestError>) -> Swift.Void)
-    final public func payBill(_ request: MpesaSDK.PayBillRequest, _ completionHandler: @escaping (Swift.Result<MpesaSDK.Mpesa.Express.PayBillResponse, MpesaSDK.RequestError>) -> Swift.Void)
+    final public func payBill(_ request: MpesaSDK.PayBillRequest, _ completionHandler: @escaping (Swift.Result<MpesaSDK.PayBillResponse, MpesaSDK.RequestError>) -> Swift.Void)
     final public func checkStatus(of transaction: MpesaSDK.TransactionQueryRequest, _ completionHandler: @escaping (Swift.Result<MpesaSDK.Mpesa.Express.TransactionQueryResponse, MpesaSDK.RequestError>) -> Swift.Void)
     @objc deinit
   }
@@ -32,7 +31,15 @@ extension MpesaSDK.C2BTransactionConfirmationRequest : Swift.Encodable {
   public func encode(to encoder: Swift.Encoder) throws
 }
 public struct TransactionQueryRequest {
-  public init(businessCode: Swift.String, requestTime: Foundation.Date, checkoutRequestID: Swift.String)
+  public init(businessCode: Swift.String, timestamp: Swift.String, checkoutRequestID: Swift.String)
+}
+public struct PayBillResponse {
+  public let timestamp: Swift.String
+  public let merchantRequestID: Swift.String
+  public let checkoutRequestID: Swift.String
+  public let responseCode: Swift.String
+  public let responseDescription: Swift.String
+  public let customerMessage: Swift.String
 }
 public struct ExpressTransactionResponse {
   public let merchantRequestID: Swift.String

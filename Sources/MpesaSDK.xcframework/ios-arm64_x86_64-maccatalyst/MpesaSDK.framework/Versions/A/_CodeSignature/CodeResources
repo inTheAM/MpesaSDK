@@ -29,42 +29,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gEiyjTWza0Pf1FdsTgKDAOTlVTxQlNvTRHzlMhRQFyo=
+			pfS6M0SPOeeWkMz9kvSOc7dYfyGUpf6DtARLFS8qYBo=
 			</data>
 		</dict>
 		<key>Modules/MpesaSDK.swiftmodule/arm64-apple-ios-macabi.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gy60nfm55sC9gZ/OVUR6oTVbf90nmg8LGGaZ1p2+Nx4=
+			BEnekDM1kXTRW83eZetU15h7E7jhHq4M+BkslYyAvF4=
 			</data>
 		</dict>
 		<key>Modules/MpesaSDK.swiftmodule/arm64-apple-ios-macabi.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bGeRqT4xICUuXZyAg2eaK0A6l8quryWNOLn+CKnRnbA=
+			zJhAP2GSpa6yIJ3J/4MD2L5AXQybHjSNoSYuJVtsl0g=
 			</data>
 		</dict>
 		<key>Modules/MpesaSDK.swiftmodule/x86_64-apple-ios-macabi.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dB1S2A6tjFbsmJ3I/muuVI/EaNt7lpB0m9ITAZ/XZ1c=
+			UHDnqMpwkmBX2O4CHwA5nJNOBh7Jr1iyb8Aj8BfXM8c=
 			</data>
 		</dict>
 		<key>Modules/MpesaSDK.swiftmodule/x86_64-apple-ios-macabi.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AbNk5KHvQ3qae62Maryem7bjs+mSINawK+v+PFe2P1I=
+			Lgx/9oNpqQQkLqvgcd63jH1XZi3ocbuSUgHOtCxfSFQ=
 			</data>
 		</dict>
 		<key>Modules/MpesaSDK.swiftmodule/x86_64-apple-ios-macabi.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			T6+nq/D+EA3bv96EWbck6U9hnIhVyFoIRyYeOc+hItw=
+			BE1m9g86RSduJFucO2VzR4h5qrreYKVNY7+58rnEeTU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

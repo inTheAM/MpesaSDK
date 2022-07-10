@@ -18,27 +18,27 @@
 		</data>
 		<key>Modules/MpesaSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		oFkWZSHGbgwS0ono1wAjdaJZ9RE=
+		AF8yq3rgNmCEHhiJEGi6Sn61930=
 		</data>
 		<key>Modules/MpesaSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		6xEG7lJZi5GyQT/4ctVgTnoYLj0=
+		J/ypdCBCSvu+JUXXAS0z70dI1AU=
 		</data>
 		<key>Modules/MpesaSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		nHSfo+1+pufRRsnv+7x2L1dhWJ8=
+		PPx5mk5zSZcQfhBsWwLZQ7C3rEE=
 		</data>
 		<key>Modules/MpesaSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		Tprfyvx4nmjbg0d5aaJJcKdl55g=
+		HuvmZQjfOPmyzPETjPTOz7Ac8aw=
 		</data>
 		<key>Modules/MpesaSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		TF5fwcmLf1hsEgPMTv84VeQ9Zus=
+		2yP7xtkB2/9n22I+Jwt0j4LFB5M=
 		</data>
 		<key>Modules/MpesaSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		H4T/r9pk1MXnKtUxyZ2nZP+N/dk=
+		3rWEItEDFY4KhEPrZRZNXyY1Ek4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -65,42 +65,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QHz5nOZW4klscoOQcc3vKQDArPBOBz0a55HtZCgvKCg=
+			11usaQOfROzLegmbQOW1p6E2ZrMG/t3doBXSvM5S2y0=
 			</data>
 		</dict>
 		<key>Modules/MpesaSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UXsyVf4yLqOi8LFCvUCPc7l8478TM1p6eA/aB5JJyhA=
+			64nD9ckgjSFCgjGrVil79z+mZq4T7jbtLgHAfUgR5uA=
 			</data>
 		</dict>
 		<key>Modules/MpesaSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			V/5lxWCoxOc2HF/bOA3OwIKaMsapEkmLLL7xuRe5nvo=
+			7mMASDT4NZCmqnfHz/NSYq/ZGA8Y89TT3gosIYkkB8w=
 			</data>
 		</dict>
 		<key>Modules/MpesaSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Mrmga3s6bcTJUMYA2g+zji+R5KCmWUSK1Ab9kfD6jNs=
+			FLPUppOO/vnXyTCAbrjPKejILtvQV9J3F/zvrEG5QXA=
 			</data>
 		</dict>
 		<key>Modules/MpesaSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			67+sdy1jS0RGZZTVvdtr6tZD7V4Ngf8Xc9ZOK6r4RqY=
+			j5ruvWIKQ5sxdnDrBpBuEq3d+7BWDnm65h6lsW9i7qg=
 			</data>
 		</dict>
 		<key>Modules/MpesaSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nAmk4BzSvRrrS+rMcuDUclzA2lfsC5Jbr4c6JSrXWMk=
+			EX26P5oVp+cnxB8Zsg/JmemvhYZU0sNEC057mGqHBHk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
